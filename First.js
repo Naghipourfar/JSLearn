@@ -402,3 +402,66 @@ function mathWorking() {
         16. Math.tan(3)
     */
 }
+
+function regex() {
+    // define object
+
+    // 1st method
+    var pattern = RegExp("a", "i") // pattern , modifiers -> e.g. a, ignore-case
+
+    // 2nd method
+    var patt = /[acgmo]/i // at least contains one character of a, c, g, m, o /(i means ignore-case) (default: case sensitive)
+    var text = "Hello, World!"
+
+    alert(patt.test(text)) // returns true -> at least one character has been found
+    alert(patt.exec(text)) // returns o which true the test
+
+    // patt = /[a-zA-z]/ : a,b,c,...,z, A, B, C, D, ..., Z
+    // patt = /[^abc]/ -> true if all characters are either a,b,c (e.g. salam is false)
+    // NOTE: test is false iff exec is null
+
+
+    // Meta characters
+    // ^ means NOT :)
+
+    // 1. Dot
+    patt = /a.i/ // means that every characters can be replaced to .
+    // just one character can be replaced with .
+    // do we have 3-len strings start with a and end with i?
+
+    // 2. \w -> world characters (e.g. a-z, A-z, 0-9, _, ...)
+    patt = /\w/ // do the string has at least one character to be a world character?
+
+    // 3. \W -> opposite of \w (e.g. space, `, ', ...)
+
+    // 4. \d -> digit (NOT number!)
+    patt = /\d/ // does it have at least one digit?
+
+    // 5. \D -> opposite of \d
+
+    // 6. \s -> space : looks for whitespaces like space, tab, newLine ,...
+    patt = /\s/ // do it has at least one whitespace?
+
+    // 7. \S -> opposite of \s
+
+    // 8. \b -> looks for expressions which appears at the start or end part substrings of a string
+    patt = /\bmohsen/ // do string contains "mohsen" in very first or last part of its words?
+
+    // 9. \B -> opposite of \b
+
+    // Quantifiers
+
+    patt = /a+/ // nothing, a, aa, aaa, ...
+    patt = /a?/ // nothing, a
+
+    patt = /\d{4}/ // 4-digit or more numbers are accepted
+    patt = /\d{4, 10}/ // 4-digit until 10-digit numbers are accpeted
+
+    patt = /m$/ // is there "m" at the end of string
+
+    patt = /^[a-z]/ // is there a,b,c,...,z at the start of string
+
+
+
+
+}
