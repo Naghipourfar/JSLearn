@@ -1,23 +1,34 @@
 <html>
+<!-- HTML is compiling line-by-line codes -->
 
-    <head>
+    <head> <!-- Usually they put script tags on this tag! (Conventional)-->
+        <script lang="Javascript">  // this is default assigned
+            // NOTE: to access every Web Objects you have to use document
+            document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
+            // get acccess to p1 paragraph object --> just like java
+            // innerHTML --> Content of the tag (e.g. for paragraph is the string)
+            // "" or '' defines a string in js
+
+            // In js we have lots of events like onload, ...
+
+            // define a function
+
+            function changeText() { // You have to invoke it to use it! :D
+                document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
+            }
+
+
+
+        </script>
+
 
     </head>
 
-    <body>
+    <body onload="changeText()"> <!-- This is an event which says when HTML Pages has been loaded, invoke function changeText()-->
         <p id="p1">
             Salaam! This is my first Javascript page.
         </p>
     </body>
 
-    <script lang="Javascript">  // this is default assigned
-        // NOTE: to access every Web Objects you have to use document
-        document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
-            // get acccess to p1 paragraph object --> just like java
-        // innerHTML --> Content of the tag (e.g. for paragraph is the string)
-        // "" or '' defines a string in js
-
-
-    </script>
 
 </html>
