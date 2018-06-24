@@ -2,9 +2,9 @@
 <!-- HTML is compiling line-by-line codes -->
 
     <head> <!-- Usually they put script tags on this tag! (Conventional)-->
-        <script lang="Javascript">  // this is default assigned
+        <script lang="Javascript" src="First.js" type="text/Javascript">  // this is default assigned
             // NOTE: to access every Web Objects you have to use document
-            document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
+            // document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
             // get acccess to p1 paragraph object --> just like java
             // innerHTML --> Content of the tag (e.g. for paragraph is the string)
             // "" or '' defines a string in js
@@ -13,9 +13,11 @@
 
             // define a function
 
-            function changeText() { // You have to invoke it to use it! :D
-                document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
-            }
+            // function changeText() { // You have to invoke it to use it! :D
+            //     document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
+            // }
+
+            // Because of huge possibility of having long functions --> make .js file and define functions in it!
 
 
 
