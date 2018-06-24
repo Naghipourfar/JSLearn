@@ -324,3 +324,40 @@ function createNewObject(){
 
     alert(ahmad.salary)
 }
+
+
+function dateHandling() {
+    // create a date object
+
+    // 1st method
+    var a = new Date(); // create a date object with current date and time
+
+    // 2nd method -> use timestamp -> # of miliseconds past from 1st january of 1970 00:00 GMT
+    var b = new Date(12321313) // create a date 12321313 past from the origin time
+
+    // 3rd method -> use Date String
+    var c = new Date("2001/02/11")
+
+    // 4rd method -> specify everything exactly!
+    var d = new Date(2012, 12, 12, 10, 34, 20, 743) // year, month, day, hour, minute, seconds, miliseconds (NOTES: monthIndex start with 0)
+
+    var day = d.getDay() // sunday = 1, ...
+
+    var dayOfMonth = d.getDate() // get day of the month
+
+    alert(d.getFullYear()) // get year in 4-digit format
+    alert(d.getMilliseconds()) // get miliseconds of date d
+    alert(d.getMinutes()) // get minutes
+    alert(d.getMonth()) // number of month -> NOTE: 0:11
+    alert(d.getTime()) // # of miliseconds from origin time to the date d
+
+    alert(Date.parse("March 21,2013")) // static method -> return distance of specified time from origin time
+
+    // You can change date d via setter methods like d.setMonth(8)
+
+    alert(d.toDateString()) // return short date string
+    alert(d.toString()) // default method like java is being treated
+
+
+
+}
