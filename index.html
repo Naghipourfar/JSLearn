@@ -2,28 +2,7 @@
 <!-- HTML is compiling line-by-line codes -->
 
     <head> <!-- Usually they put script tags on this tag! (Conventional)-->
-        <script lang="Javascript" src="First.js" type="text/Javascript">  // this is default assigned
-            // NOTE: to access every Web Objects you have to use document
-            // document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
-            // get acccess to p1 paragraph object --> just like java
-            // innerHTML --> Content of the tag (e.g. for paragraph is the string)
-            // "" or '' defines a string in js
-
-            // In js we have lots of events like onload, ...
-
-            // define a function
-
-            // function changeText() { // You have to invoke it to use it! :D
-            //     document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>";
-            // }
-
-            // Because of huge possibility of having long functions --> make .js file and define functions in it!
-
-            // NOTE: JS is case-sensitive
-            // NOTE: Using ; is optional but it is recommended! :/ --> Has application in compressing files and faster loading HTML pages
-
-
-        </script>
+        <script lang="Javascript"  src="First.js" type="text/Javascript" />
 
 
     </head>
@@ -32,7 +11,39 @@
         <p id="p1">
             Salaam! This is my first Javascript page.
         </p>
+
+
+
+        <!-- Blur Event -> when focus is gone from this input text box invoke function in js-->
+        <!-- event is a default word in tags means the current event which ocurred just at the moment  -->
+        <!-- this is also another keyword which corresponds to object tag which invoke a function -->
+        <form method="GET" action="login.php" onsubmit="validateData()"> <!-- define an area which its data will be sent to server side (e.g. login)-->
+            <!-- each form has a method : GET or POST : the method determines how data will be sent -->
+            <!-- action determines this data is going to which file -->
+            <input id="txt1" type="text" onfocus="js_function()"/> <!-- Focus Event -> when focus is on this input text box invoke function in js-->
+            <input id="txt2" type="text" onfocus="js_function()" src="First.js" onkeyup="defineEvent(this)"/>
+            <input type="submit"/> <!-- when this button is clicked onsubmit is triggered!-->
+        </form>
     </body>
 
 
 </html>
+
+<!-- Events
+            1. onload
+            2. onfocus
+            3. onblur != onfocus
+
+            4. ondblclick : when double click is occured!
+            6. oncontextmenu : when right clicked!
+            7. onsubmit : for a form when submit button is clickecd before sending to php file (e.g. check data input validation)
+            
+        Keyboard events:
+            1. onkeyup : when just a character is entered by user in somewhere like textbox, ...
+            2. onkeydown : when the character is entered but before not goes into box -> controlling the input is an app.
+
+        Mouse Event:
+            1. onmouseover : when user is in box with mouse
+            2. onmouseout : when mouse is outside of the HTML element
+
+        -->

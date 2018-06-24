@@ -1,3 +1,24 @@
+// NOTE: to access every Web Objects you have to use document
+            // document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
+            // get acccess to p1 paragraph object --> just like java
+            // innerHTML --> Content of the tag (e.g. for paragraph is the string)
+            // "" or '' defines a string in js
+
+            // In js we have lots of events like onload, ...
+
+            // define a function
+
+            // function changeText() { // You have to invoke it to use it! :D
+            //     document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>";
+            // }
+
+            // Because of huge possibility of having long functions --> make .js file and define functions in it!
+
+            // NOTE: JS is case-sensitive
+            // NOTE: Using ; is optional but it is recommended! :/ --> Has application in compressing files and faster loading HTML pages
+
+
+
 var name; // Global Variable
 
 
@@ -150,4 +171,19 @@ function defineLoop() {
         personInfo += person[x];
     }
     document.write(personInfo)
+}
+
+
+function defineEvents(e) { // e is an event
+    alert(e.keyCode)
+
+    if (e.keyCode == 56){
+        e.preventDefault(); // prevent what the event is looking forward to do! (e.g. Not write the character in the box)
+    }
+
+    document.getElementById("txt1").value = "salam" // input attribute is value not innerHTML
+}
+
+function defineEvent(owner){
+    owner.value = "Salam!!!";
 }
