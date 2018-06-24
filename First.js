@@ -36,4 +36,22 @@ function defineVars(){
         lastname: "Naghipourfar",
         age : 20
     }
+
+    var nullVariable = null;
+}
+
+function defineAlert(){ // define alerts --> useful for debugging
+    alert("Hey, What's up?")
+    var text = "Heh!"
+    alert(text)
+
+    var programmer = {
+        name : "Mohsen",
+        lastname: "Naghipourfar",
+        age : 20,
+        STID : 1231231
+    }
+
+    // alert(programmer.name)
+    // alert(programmer["name"]) // same as above
 }
