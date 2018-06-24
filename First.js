@@ -84,3 +84,35 @@ function defineOperations() {
     var h = c < 100 ? a : b; // Conditional Operation
 
 }
+
+function defineConditionClauses() {
+    var age = prompt("How old are you?"); // gets input from user with showing input string (output of prompt is string )
+
+    if (age < 18) {
+        alert("Ha ha so funny!")
+    } else {
+        alert("Mmm, Nice!")
+    }
+
+    if (age == 10) { // check just content --> type doesn't matter
+        alert("age is 10 but the type is not integer necessary")
+    }
+
+    if (age === 10) { // check content and type
+        alert("age is 10 and its type is integer")
+    }
+
+
+    switch (age) {
+        case 10:
+            alert("Your age is 10")
+            break;
+        case "Mohsen":
+            alert("Ha ha funny! :/ ");
+            break;
+        default:
+            alert("LOL!")
+            break;
+    }
+
+}
