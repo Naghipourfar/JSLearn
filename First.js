@@ -177,7 +177,7 @@ function defineLoop() {
 function defineEvents(e) { // e is an event
     alert(e.keyCode)
 
-    if (e.keyCode == 56){
+    if (e.keyCode == 56){ // if e is really an event, it has an attribute called keyCode which is ASCII Code number
         e.preventDefault(); // prevent what the event is looking forward to do! (e.g. Not write the character in the box)
     }
 
