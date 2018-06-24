@@ -116,3 +116,38 @@ function defineConditionClauses() {
     }
 
 }
+
+function calcSum(a, b) {
+    return a + b;
+}
+
+function parseInteger() {
+    a = parseInt(prompt("Enter a number")) // cast to number
+    b = eval(prompt("Enter a number")) // cast to number
+}
+
+
+function defineLoop() {
+    for (var i = 0; i < 10; i++) {
+        document.write(i = "<br />") // write on webpage, end="\n" but default is ""
+    }
+
+    var names = ["mohsen", "ali", "mohammad"]
+
+    for (var i = 0; i < names.length; i++) { // just like java!
+        document.write(names[i] + "<br />")
+    }
+
+    // js has while and do-while loops just like java and C/C++ format
+
+    var person = {
+        name: "Amirhossein",
+        lastname: "Jadidi",
+        age: 21
+    }
+    var personInfo;
+    for (var x in person) {
+        personInfo += person[x];
+    }
+    document.write(personInfo)
+}
