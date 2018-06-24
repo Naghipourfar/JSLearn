@@ -197,3 +197,29 @@ function handleException() { // it is like java :D
 
     }
 }
+
+// DOM : Document Object Model
+// Tree Structure which browser model the page based on the written code
+// e.g. Each tag like html, body, head is a node and head is html's child
+// document is the root of tree
+// document -> root element(html)
+
+//NOTE: document.write MUST be used when HTML Load is complete!
+
+
+function handleElement() {
+    var paragraphs = document.getElementById("ID").getElementsByTagName("p") // all p tags -> All paragraphs -> return array
+    for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].innerHTML = i + ". Salam!";
+    }
+}
+
+function children() {
+    document.getElementById("ID").childNodes // get children of the corresponding tag -> return List of Nodes
+    document.getElementById("ID").parentNode.firstChild
+    document.getElementById("ID").nextSibling.nodeName // get node name of sibling's tag -> returns node name with CAPITAL letters
+    // nodeName attribute is read-only attribute
+    document.getElementById("ID").nodeValue // gets the value of node -> e.g. text of the current node (NOTE: HTML tags have null nodeValue)
+    document.getElementById("ID").nodeType // gets the kind of node -> Element=1, attribute=2, text=3, comment=8, document=9 (Rare app)
+    
+}
