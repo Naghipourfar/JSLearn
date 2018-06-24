@@ -361,3 +361,22 @@ function dateHandling() {
 
 
 }
+
+function arrayHandling() {
+    //NOTE: each object has attribute called prototye which you can add something to the object (like new attributes)
+    //NOTE: like string array objects are immutable objects
+
+    // Some useful and ordinary methods of array
+    /*
+        1. concat
+        2. indexOf
+        3. join(", ") -> join all array elements with , and return string
+        4. pop -> return last element of array with removing it! (like extract)
+        5. push -> add elements to array at the end of array (like append)
+        6. reverse
+        7. shift() -> left shift and return the 0 index element of array which is deleted from array
+        8. slice -> like python we have negative indices for that
+        9. splice(4, 2, "ali", "alireza", "reza") -> from index 4 remove 2 items and add "ali" and "alireza" and "reza" to the specified position
+
+    */
+}
