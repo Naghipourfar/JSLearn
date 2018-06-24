@@ -235,7 +235,7 @@ function addNewTag() {
     newTag.innerHTML("Visit my page!")
 
     newTag.href = "http://ce.sharif.edu/~naghipourfar"
-    newTag.onclick = function() {alert()} // specify an inline function to onclick event
+    newTag.onclick = function () { alert() } // specify an inline function to onclick event
     // add to an existing element in HTML page
     document.getElementById("ID").appendChild(newTag)
 
@@ -266,7 +266,7 @@ function getRootElement() {
 }
 
 
-function stringHandling(){
+function stringHandling() {
     var name = "Mohsen"
 
     //NOTE: Like java strings in js are not mutable objects -> all methods return the new modified string (like concat(), ...)
@@ -314,7 +314,7 @@ function createNewPerson(name, lastname, age) {
     this.age = age
 }
 
-function createNewObject(){
+function createNewObject() {
     var ahmad = new createNewPerson("ahmad", "ahmadi", 12) // create an object which has 3 attributes at least
     alert(ahmad.name)
 
@@ -378,5 +378,27 @@ function arrayHandling() {
         8. slice -> like python we have negative indices for that
         9. splice(4, 2, "ali", "alireza", "reza") -> from index 4 remove 2 items and add "ali" and "alireza" and "reza" to the specified position
 
+    */
+}
+
+function mathWorking() {
+    // Math Class -> NOTE: You mustn't create an object from Math Like Java again and again and again! :D
+    /*
+        1. Math.PI
+        2. Math.e
+        3. Math.LN2
+        4. Math.round(2.3) -> round the number : 2 (e.g. round(2.5) = round(2.67) = 3)
+        5. Math.random() -> [0, 1] random number
+        6. Math.floor()
+        7. Math.abs()
+        8. Math.asin() -> arcsin(x)
+        9. Math.ceil(2.3) -> 3
+        10. Math.exp(2) -> 2.71^2
+        11. Math.log(23) -> ln(23)
+        12. Math.max(3, 21, -23, -123) -> 21
+        13. Math.min(3, 21, -23, -123) -> -123
+        14. Math.pow(2, 6) -> 64
+        15. Math.sqrt(81) -> 9
+        16. Math.tan(3)
     */
 }
