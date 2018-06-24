@@ -221,5 +221,46 @@ function children() {
     // nodeName attribute is read-only attribute
     document.getElementById("ID").nodeValue // gets the value of node -> e.g. text of the current node (NOTE: HTML tags have null nodeValue)
     document.getElementById("ID").nodeType // gets the kind of node -> Element=1, attribute=2, text=3, comment=8, document=9 (Rare app)
-    
+
+}
+
+function addNewTag() {
+    var newTag = document.createElement("a")
+
+    // 1st method
+    var linkText = document.createTextNode("Visit my page!")
+    newTag.appendChild(linkText) // adds to children list's tail
+
+    // 2nd method
+    newTag.innerHTML("Visit my page!")
+
+    newTag.href = "http://ce.sharif.edu/~naghipourfar"
+    newTag.onclick = function() {alert()} // specify an inline function to onclick event
+    // add to an existing element in HTML page
+    document.getElementById("ID").appendChild(newTag)
+
+    var target = document.getElementById("ID").getElementsByTagName("a")[0]
+    document.getElementById("ID").insertBefore(newTag, target) // adds to children list's head of the parent tag
+}
+
+function removeTag() {
+    var parent = document.getElementById("ID") // specify the parent tag
+    var child = parent.getElementsByTagName("a")[0] // specify the child tag to be removed
+
+    parent.removeChild(child) // removes the child
+}
+
+function replaceTag() {
+    var parent = document.getElementById("ID") // specify the parent tag
+    var oldChild = parent.getElementsByTagName("a")[0] // specify the child tag to be removed
+
+    // suppose newTag is created... :D
+
+    parent.replaceChild(newTag, oldChild) // removes the child
+}
+
+
+function getRootElement() {
+    document.doctype // access to root element -> HTML Tag
+    document.body // access to body tag of HTML page
 }
