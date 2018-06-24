@@ -1,21 +1,21 @@
 // NOTE: to access every Web Objects you have to use document
-            // document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
-            // get acccess to p1 paragraph object --> just like java
-            // innerHTML --> Content of the tag (e.g. for paragraph is the string)
-            // "" or '' defines a string in js
+// document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>"
+// get acccess to p1 paragraph object --> just like java
+// innerHTML --> Content of the tag (e.g. for paragraph is the string)
+// "" or '' defines a string in js
 
-            // In js we have lots of events like onload, ...
+// In js we have lots of events like onload, ...
 
-            // define a function
+// define a function
 
-            // function changeText() { // You have to invoke it to use it! :D
-            //     document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>";
-            // }
+// function changeText() { // You have to invoke it to use it! :D
+//     document.getElementById("p1").innerHTML = "Please visit <a href='http://ce.sharif.edu/~naghiourfar'> my webpage </a>";
+// }
 
-            // Because of huge possibility of having long functions --> make .js file and define functions in it!
+// Because of huge possibility of having long functions --> make .js file and define functions in it!
 
-            // NOTE: JS is case-sensitive
-            // NOTE: Using ; is optional but it is recommended! :/ --> Has application in compressing files and faster loading HTML pages
+// NOTE: JS is case-sensitive
+// NOTE: Using ; is optional but it is recommended! :/ --> Has application in compressing files and faster loading HTML pages
 
 
 
@@ -177,13 +177,23 @@ function defineLoop() {
 function defineEvents(e) { // e is an event
     alert(e.keyCode)
 
-    if (e.keyCode == 56){ // if e is really an event, it has an attribute called keyCode which is ASCII Code number
+    if (e.keyCode == 56) { // if e is really an event, it has an attribute called keyCode which is ASCII Code number
         e.preventDefault(); // prevent what the event is looking forward to do! (e.g. Not write the character in the box)
     }
 
     document.getElementById("txt1").value = "salam" // input attribute is value not innerHTML
 }
 
-function defineEvent(owner){
+function defineEvent(owner) {
     owner.value = "Salam!!!";
+}
+
+function handleException() { // it is like java :D
+    try {
+
+    } catch (e1) { // gets a name for exception
+        alert("An Error occured!\n" + e1.message)
+    } finally {
+
+    }
 }
