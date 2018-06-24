@@ -1,11 +1,11 @@
 var name; // Global Variable
 
 
-function changeText(){
+function changeText() {
     document.getElementById("p1").innerHTML = "The function in js file is just invoked!";
 }
 
-function learningJavascript(){
+function learningJavascript() {
     // Define Variables --> JS is weakly typed!
     var text = "Hi, My name is Mohsen Naghipourfar"; // Local Variable
     // Type casting is automatic --> You can write text = 2; in next line and it's totally ok!
@@ -13,7 +13,7 @@ function learningJavascript(){
 }
 
 
-function defineVars(){
+function defineVars() {
     var name = "Mohsen"; // String
     var age = 20; // Integer
     var height = 73.3; // Double or Float
@@ -32,26 +32,55 @@ function defineVars(){
 
     // define an object --> Like json objects --> Inspiration for json
     var programmer = {
-        name : "Mohsen",
+        name: "Mohsen",
         lastname: "Naghipourfar",
-        age : 20
+        age: 20
     }
 
     var nullVariable = null;
 }
 
-function defineAlert(){ // define alerts --> useful for debugging
+function defineAlert() { // define alerts --> useful for debugging
     alert("Hey, What's up?")
     var text = "Heh!"
     alert(text)
 
     var programmer = {
-        name : "Mohsen",
+        name: "Mohsen",
         lastname: "Naghipourfar",
-        age : 20,
-        STID : 1231231
+        age: 20,
+        STID: 1231231
     }
 
     // alert(programmer.name)
     // alert(programmer["name"]) // same as above
+}
+
+
+function defineOperations() {
+    var a = 2;
+    var b = 2.34;
+
+    var c = a + b;
+    var d = a * b;
+    var e = a / b;
+
+    c++; ++c; --c; c++; // Increments and Decrements
+
+    c += 2;
+    c -= 2;
+    c *= 2;
+    c /= 2;
+
+    var name = "Mohsen";
+    var lastname = "Naghipourfar";
+
+    var completeName = name + " " + lastname; // String Concatenation
+
+    var f = name + c; // name cannot cast to integer but c can. so integer + string = string -> integer casts to stirng and then concatenation
+
+    var g = "2" * 20; // c = 40
+
+    var h = c < 100 ? a : b; // Conditional Operation
+
 }
