@@ -264,3 +264,63 @@ function getRootElement() {
     document.doctype // access to root element -> HTML Tag
     document.body // access to body tag of HTML page
 }
+
+
+function stringHandling(){
+    var name = "Mohsen"
+
+    //NOTE: Like java strings in js are not mutable objects -> all methods return the new modified string (like concat(), ...)
+
+    alert(name.length) // length of the string
+    alert(name.constructor) // shows definition of function which constructs the name string
+
+    alert(name.charAt(3)) // again like java
+    alert(name.charCodeAt(3)) // like above but return ASCII Code of the corresponding character
+
+    name = name.concat(" ", "Naghipourfar", "\n") // concatenate [] of strings to name string
+
+    alert(name.indexOf("sen", 2)) // looks for the start index of substring or character in name string (2 is start index for searching(optional argument))
+    alert(name.lastIndexOf("sen")) // like above but search from last index to first starting index to find the substring
+
+    alert(name.replace("sen", "ammad")) // replace "sen" with "ammad" just once!
+
+    alert(name.search("Mohsen")) // search the substring just like indexOf
+
+    alert(name.slice(2, 5)) // returns the substring [2:5] -> [2, 5) : 2, 3, 4
+
+    alert(name.split(",")) // just like split() in java -> based on regex splits the string and returns the list of splitted strings
+
+    alert(name.substr(0, 3)) // substring of name from 0 to the LENGTH 3 (Diff between slice) -> [0: 0+3]
+
+    alert(name.toUpperCase()) // It's obvious! :D
+    alert(name.toLowerCase()) // oh come on! :D
+
+    // Wrapper Methods
+
+    alert(name.anchor("top")) // creates bookmark : <a name="top"> nameValue </a>
+    alert(name.big()) // create a big tag
+    alert(name.bold()) // create a b tag
+    alert(name.fixed()) // create a tt tag -> tele type -> change font to machine font
+    alert(name.link("http://ce.sharif.edu/~naghipourfar")) // creates a link tag
+    alert(name.small()) // creates a small tag for name
+    alert(name.strike()) // create a strike tag
+    alert(name.sub()) // creates a sub tag -> create a subscript for name and return the tag
+    alert(name.sup()) // creates a sup tag -> create a superscript for name and return the tag
+}
+
+function createNewPerson(name, lastname, age) {
+    this.name = name
+    this.lastname = lastname
+    this.age = age
+}
+
+function createNewObject(){
+    var ahmad = new createNewPerson("ahmad", "ahmadi", 12) // create an object which has 3 attributes at least
+    alert(ahmad.name)
+
+    // add attribute to createNewPerson
+    createNewPerson.prototype.salary = null
+    ahmad.salary = 5400
+
+    alert(ahmad.salary)
+}
