@@ -492,3 +492,8 @@ function windowWorking() {
     alert(window.history.forward())
 }
 
+
+
+
+
+
