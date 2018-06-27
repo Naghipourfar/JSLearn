@@ -460,8 +460,35 @@ function regex() {
     patt = /m$/ // is there "m" at the end of string
 
     patt = /^[a-z]/ // is there a,b,c,...,z at the start of string
-
-
-
-
 }
+
+
+// BOM : Browser Object Model -> lets us talk to the browser!
+// Kind of depend on browser for instructions
+
+function windowWorking() {
+    // window object is in each statements so we don't write it (e.g. var x -> window.x)
+    // e.g. document.getElementById() -> window.document.getElementById()
+
+    alert(window.innerWidth) // get Width of browser window in pixels
+
+    // But different browser may work differently (e.g. IE versions)
+
+    // write global code which runs in every browser
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; // 3 ways for getting height
+
+    var w = window.open("http://google.com", "", "_blank") // by default opens new tab but this opens in new window -> returns a window object
+    w.close()
+
+    window.moveTo(10, 10) // x, y
+    window.focus()
+
+    window.resizeTo(500, 150) // width, length
+    window.focus()
+
+    alert(screen.availHeight) // depends on screen resolution not the browser page but it is in window attributes
+    alert(window.history.length)
+
+    alert(window.history.forward())
+}
+
