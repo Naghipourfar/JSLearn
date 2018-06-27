@@ -505,7 +505,7 @@ function windowWorking() {
 
     var timeout = setTimeout(function(){alert()}, 3000); // do the functions after 3000ms and then done (don't repeat!)
 
-    clearTimeout(timeout); // clear it!
+    clearTimeout(timeout); // clear
 
 
 }
