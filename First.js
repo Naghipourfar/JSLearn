@@ -487,9 +487,27 @@ function windowWorking() {
     window.focus()
 
     alert(screen.availHeight) // depends on screen resolution not the browser page but it is in window attributes
-    alert(window.history.length)
+    alert(window.history.length) // Number of items in our history
 
-    alert(window.history.forward())
+    alert(window.history.forward()) // Step forward in history (also it has backward)
+
+    alert(window.navigator) // navigator gets us some information about our browser -> can be closed for security
+
+    alert(window.navigator.appName) // name of the app -> chrome, netscape, firefox, safari and etc
+
+    // Timing Functions -> Do something every few seconds
+
+    setInterval(function(){alert()}, 3000) // alert every 3000ms in browser -> useful in slideshow
+
+    var timer = setInterval(function(){var d = new Date(); d.toLocaleTimeString() /*d shows time for now*/}, 1000)
+
+    clearInterval(timer); // clear the created interval
+
+    var timeout = setTimeout(function(){alert()}, 3000); // do the functions after 3000ms and then done (don't repeat!)
+
+    clearTimeout(timeout); // clear it!
+
+
 }
 
 
