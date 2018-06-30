@@ -57,3 +57,5 @@ function editPerson(person) {
     document.getElementById("lastname").value = person.childNodes[1].innerHTML
 
 }
+
+
